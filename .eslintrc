@@ -1,0 +1,10 @@
+{
+    "extends": ["airbnb", "airbnb/hooks"],
+    "rules": {
+        "react/prop-types": "warn",
+        "react/require-default-props": "off",
+        "semi": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": "off"
+    }
+}
