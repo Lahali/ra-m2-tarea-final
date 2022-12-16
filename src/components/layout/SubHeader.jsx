@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Grid } from '../../styles'
-import { Button } from '../atoms'
+import { Grid, colors } from '../../styles'
+import { Icon } from '../atoms'
 import { InputTextGroup } from '../molecules'
 
 function SubHeader() {
   const SubHeaderStyled = styled(Grid)`
     padding: 1rem;
-    background-color: #e6f2f2;
-    border-top: 3px solid #cde7e7;
-    border-bottom: 3px solid #cde7e7;
+    background-color: ${colors.lightGreen};
+    border-top: 3px solid ${colors.green};
+    border-bottom: 3px solid ${colors.green};
     margin-top: 0;
   `
 
@@ -25,7 +25,7 @@ function SubHeader() {
         placeholder="Piso, chalet o garaje..."
       />
       <InputTextGroup id="city" placeholder="Madrid, Barcelona o Zaragoza..." />
-      <Button />
+      <Icon />
     </SubHeaderStyled>
   )
 }

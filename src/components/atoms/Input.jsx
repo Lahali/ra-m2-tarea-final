@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { colors } from '../../styles'
 
 function Input({ id, placeholder }) {
   const InputStyled = styled.input`
@@ -10,7 +11,7 @@ function Input({ id, placeholder }) {
     padding-top: 0.5rem;
     padding-left: 1rem;
     width: 19rem;
-    box-shadow: 2px 2px 5px lightgray;
+    box-shadow: 2px 2px 5px ${colors.shade};
   `
 
   return <InputStyled type="text" id={id} name={id} placeholder={placeholder} />

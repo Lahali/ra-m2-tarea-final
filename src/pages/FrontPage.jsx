@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header, SubHeader } from '../components/layout'
-import { CardHouse } from '../components/molecules'
+import { Houses } from '../components/organisms'
 import { Grid, GridItem } from '../styles'
 
 function FrontPage() {
@@ -16,15 +16,7 @@ function FrontPage() {
           gap="0px"
           background="none"
         >
-          <CardHouse />
-          <CardHouse />
-          <CardHouse />
-          <CardHouse />
-          <CardHouse />
-          <CardHouse />
-          <CardHouse />
-          <CardHouse />
-          <CardHouse />
+          <Houses />
         </GridItem>
 
         <GridItem columns="1fr">Pruebo cositas</GridItem>

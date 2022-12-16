@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ButtonWide, Card } from '../atoms'
-// import { GridItem } from '../../styles'
+import { colors } from '../../styles'
 
 function CardHouse() {
   const ImgStyled = styled.img`
@@ -23,6 +23,7 @@ function CardHouse() {
     flex-direction: row;
     align-items: flex-start;
     margin: 5px;
+    color: ${colors.main};
   `
 
   return (
