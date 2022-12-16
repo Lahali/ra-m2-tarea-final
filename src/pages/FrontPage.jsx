@@ -31,7 +31,9 @@ function FrontPage() {
           </GridItem>
         </GridItem>
 
-        <GridItem columns="1fr">MAPA</GridItem>
+        <GridItem columns="1fr" width="100%">
+          MAPA
+        </GridItem>
       </Grid>
     </>
   )

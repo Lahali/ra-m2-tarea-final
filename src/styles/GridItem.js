@@ -6,6 +6,7 @@ const GridItem = styled(Grid)`
   grid-column: ${({ gridColumn }) => gridColumn || ''};
   grid-row: ${({ gridRow }) => gridRow || ''};
   height: ${({ height }) => height || '75vh'};
+  width: ${({ width }) => width};
   border-radius: 10px;
   padding: ${({ padding }) => padding || '1rem'};
 `
