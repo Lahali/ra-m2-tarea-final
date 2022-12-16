@@ -1,18 +1,8 @@
 import React from 'react'
-import { Header, SubHeader } from './components/layout'
-import { Grid, GridItem } from './styles'
+import FrontPage from './pages/FrontPage'
 
 function App() {
-  return (
-    <>
-      <Header />
-      <SubHeader />
-      <Grid>
-        <GridItem>Holis caracolis</GridItem>
-        <GridItem>Pruebo cositas</GridItem>
-      </Grid>
-    </>
-  )
+  return <FrontPage />
 }
 
 export default App
