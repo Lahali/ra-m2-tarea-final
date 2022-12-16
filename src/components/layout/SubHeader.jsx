@@ -14,9 +14,17 @@ function SubHeader() {
   `
 
   return (
-    <SubHeaderStyled columns=" 1fr 1fr 1fr 1fr" gap="1rem" margin="0">
-      <InputTextGroup placeholder="Piso, chalet o garaje..." />
-      <InputTextGroup placeholder="Madrid, Barcelona o Zaragoza..." />
+    <SubHeaderStyled
+      columns=" 1fr 1fr 1fr 1fr"
+      gap="1rem"
+      marginLeft="0"
+      marginRight="0"
+    >
+      <InputTextGroup
+        id="propertyType"
+        placeholder="Piso, chalet o garaje..."
+      />
+      <InputTextGroup id="city" placeholder="Madrid, Barcelona o Zaragoza..." />
       <Button />
     </SubHeaderStyled>
   )

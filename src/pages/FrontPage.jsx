@@ -14,6 +14,7 @@ function FrontPage() {
           columns="1fr 1fr 1fr"
           rows="185px 185px 185px"
           gap="0px"
+          background="none"
         >
           <CardHouse />
           <CardHouse />
