@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -16,7 +17,7 @@ function ButtonWide({ ...props }) {
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 75px;
+    width: ${({ width }) => width || '75px'};
     height: 25px;
   `
 

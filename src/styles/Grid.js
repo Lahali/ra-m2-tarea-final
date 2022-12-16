@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 const Grid = styled.div`
   display: grid;
-  justify-content: center;
-  align-items: center;
+  align-self: center;
+  justify-self: center;
   grid-template-columns: ${({ columns }) => columns || '1fr 1fr'};
   grid-template-rows: ${({ rows }) => rows || '1fr'};
   column-gap: ${({ gap }) => gap || '10px'};

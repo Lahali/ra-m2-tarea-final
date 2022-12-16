@@ -1,7 +1,8 @@
 import React from 'react'
+import { ButtonWide } from '../components/atoms'
 import { Header, SubHeader } from '../components/layout'
 import { Houses } from '../components/organisms'
-import { Grid, GridItem } from '../styles'
+import { Grid, GridItem, colors } from '../styles'
 
 function FrontPage() {
   return (
@@ -17,9 +18,20 @@ function FrontPage() {
           background="none"
         >
           <Houses />
+          <GridItem
+            padding="0px"
+            columns="1fr"
+            background="none"
+            rows="20px"
+            gridColumn="2"
+          >
+            <ButtonWide width="90px" background={colors.blue}>
+              Cargar más
+            </ButtonWide>
+          </GridItem>
         </GridItem>
 
-        <GridItem columns="1fr">Pruebo cositas</GridItem>
+        <GridItem columns="1fr">MAPA</GridItem>
       </Grid>
     </>
   )
