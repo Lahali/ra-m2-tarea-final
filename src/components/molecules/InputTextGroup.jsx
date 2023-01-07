@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 
 import { Input, Label } from '../atoms'
 
-function InputTextGroup({ id, placeholder }) {
+function InputTextGroup({ id, children }) {
   return (
     <Label id={id}>
-      <Input placeholder={placeholder} id={id} />
+      <Input id={id}>{children}</Input>
     </Label>
   )
 }
 
 InputTextGroup.propTypes = {
   id: PropTypes.string,
-  placeholder: PropTypes.string,
+  children: PropTypes.node,
 }
 export default InputTextGroup

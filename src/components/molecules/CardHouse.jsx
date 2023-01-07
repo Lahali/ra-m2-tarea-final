@@ -3,29 +3,28 @@ import styled from 'styled-components'
 import { ButtonWide, Card } from '../atoms'
 import { colors } from '../../styles'
 
+const ImgStyled = styled.img`
+  border-radius: 5px;
+`
+const ParragrafStyled = styled.p`
+  font-size: 10px;
+`
+const DivFooterCard = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20px;
+  margin: 5px;
+`
+const DivParr = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 5px;
+  color: ${colors.main};
+`
 function CardHouse() {
-  const ImgStyled = styled.img`
-    border-radius: 5px;
-  `
-  const ParragrafStyled = styled.p`
-    font-size: 10px;
-  `
-  const DivFooterCard = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 20px;
-    margin: 5px;
-  `
-  const DivParr = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 5px;
-    color: ${colors.main};
-  `
-
   return (
     <Card>
       <div>
