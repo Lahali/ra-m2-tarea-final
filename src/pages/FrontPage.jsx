@@ -25,7 +25,7 @@ function FrontPage() {
             rows="20px"
             gridColumn="2"
           >
-            <ButtonWide width="90px" background={colors.blue}>
+            <ButtonWide width="100px" backgroundColor={colors.blue}>
               Cargar más
             </ButtonWide>
           </GridItem>

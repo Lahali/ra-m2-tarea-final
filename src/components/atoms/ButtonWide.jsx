@@ -20,7 +20,7 @@ const ButtonWideStyled = styled.button`
   height: 25px;
 `
 function ButtonWide({ ...props }) {
-  return <ButtonWideStyled>{props.children}</ButtonWideStyled>
+  return <ButtonWideStyled {...props}>{props.children}</ButtonWideStyled>
 }
 
 ButtonWide.propTypes = {
