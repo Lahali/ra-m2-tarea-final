@@ -1,2 +1,2 @@
-export { default as InputTextGroup } from './InputTextGroup'
+export { default as SelectGroup } from './SelectGroup'
 export { default as CardHouse } from './CardHouse'

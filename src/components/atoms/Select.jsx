@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
-const InputStyled = styled.select`
+const SelectStyled = styled.select`
   border-radius: 5px;
   border: solid 1.5px lightgray;
   padding-bottom: 0.5rem;
@@ -15,13 +15,13 @@ const InputStyled = styled.select`
 `
 
 // Llamalo Select, sera máx explicito
-function Input({ id, children }) {
-  return <InputStyled name={id}>{children}</InputStyled>
+function Select({ id, children }) {
+  return <SelectStyled name={id}>{children}</SelectStyled>
 }
 
-Input.propTypes = {
+Select.propTypes = {
   id: PropTypes.string,
   children: PropTypes.node,
 }
 
-export default Input
+export default Select

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Grid, colors } from '../../styles'
 import { Icon } from '../atoms'
-import { InputTextGroup } from '../molecules'
+import { SelectGroup } from '../molecules'
 
 const SubHeaderStyled = styled(Grid)`
   padding: 1rem;
@@ -19,22 +19,22 @@ function SubHeader() {
       marginLeft="0"
       marginRight="0"
     >
-      <InputTextGroup id="propertyType" placeholder="Piso, chalet o garaje...">
+      <SelectGroup id="propertyType" placeholder="Piso, chalet o garaje...">
         <option disabled selected>
           Piso, chalet o garaje...
         </option>
         <option value="option1">Piso</option>
         <option value="option2">Chalet</option>
         <option value="option3">Garaje</option>
-      </InputTextGroup>
-      <InputTextGroup id="city" placeholder="Madrid, Barcelona o Zaragoza...">
+      </SelectGroup>
+      <SelectGroup id="city" placeholder="Madrid, Barcelona o Zaragoza...">
         <option disabled selected>
           Madrid, Barcelona o Zaragoza...
         </option>
         <option value="option1">Madrid</option>
         <option value="option2">Barcelona</option>
         <option value="option3">Zaragoza</option>
-      </InputTextGroup>
+      </SelectGroup>
       <Icon />
     </SubHeaderStyled>
   )

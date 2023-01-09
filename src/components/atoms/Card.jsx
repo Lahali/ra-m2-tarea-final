@@ -4,12 +4,13 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 const CardStyled = styled.div`
-  width: 160px; // Quitar width.
-  height: 175px; // Quitar height.
+  // Quitar width.
+  // Quitar height.
   border-radius: 5px;
   box-shadow: 5px 5px 5px ${colors.shade};
-  margin: 5px; // Quitar margin.
+  // Quitar margin.
   margin-top: 0;
+  gap: ${({ gap }) => gap || '0px'};
 `
 function Card({ children }) {
   return (
