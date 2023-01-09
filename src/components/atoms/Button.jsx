@@ -20,7 +20,6 @@ const ButtonStyled = styled.button`
   height: 25px;
 `
 
-// Llamalo Button a secas
 function Button({ ...props }) {
   return <ButtonStyled {...props}>{props.children}</ButtonStyled>
 }

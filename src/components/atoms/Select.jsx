@@ -14,7 +14,6 @@ const SelectStyled = styled.select`
   appearance: none;
 `
 
-// Llamalo Select, sera máx explicito
 function Select({ id, children }) {
   return <SelectStyled name={id}>{children}</SelectStyled>
 }

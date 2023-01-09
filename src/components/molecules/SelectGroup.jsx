@@ -7,9 +7,10 @@ import { Select, Label } from '../atoms'
 function SelectGroup({ id, children }) {
   return (
     // el Label no tiene porque rodear el Input
-    <Label id={id}>
+    <>
+      <Label id={id} />
       <Select id={id}>{children}</Select>
-    </Label>
+    </>
   )
 }
 

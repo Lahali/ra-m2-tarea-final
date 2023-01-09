@@ -19,7 +19,12 @@ function Body() {
     <>
       <Header />
       <SubHeader />
-      <Grid>
+      <Grid
+        columns="1fr 1fr"
+        gap="0"
+        alignContent="center"
+        justifyContent="center"
+      >
         <Houses />
         <MapContainer gridColumn="1fr" width="50vw" height="92%">
           Mapa
