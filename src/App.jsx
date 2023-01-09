@@ -1,8 +1,8 @@
 import React from 'react'
-import FrontPage from './pages/FrontPage'
+import Body from './components/layout/Body'
 
 function App() {
-  return <FrontPage />
+  return <Body />
 }
 
 export default App
