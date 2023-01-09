@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
-const ButtonWideStyled = styled.button`
+const ButtonStyled = styled.button`
   background-color: ${({ backgroundColor }) =>
     // eslint-disable-next-line implicit-arrow-linebreak
     backgroundColor || colors.secondary};
@@ -21,12 +21,12 @@ const ButtonWideStyled = styled.button`
 `
 
 // Llamalo Button a secas
-function ButtonWide({ ...props }) {
-  return <ButtonWideStyled {...props}>{props.children}</ButtonWideStyled>
+function Button({ ...props }) {
+  return <ButtonStyled {...props}>{props.children}</ButtonStyled>
 }
 
-ButtonWide.propTypes = {
+Button.propTypes = {
   children: PropTypes.node,
 }
 
-export default ButtonWide
+export default Button

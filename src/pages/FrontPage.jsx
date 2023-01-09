@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonWide } from '../components/atoms'
+import { Button } from '../components/atoms'
 import { Header, SubHeader } from '../components/layout'
 import { Houses } from '../components/organisms'
 import { Grid, GridItem, colors } from '../styles'
@@ -29,9 +29,9 @@ function FrontPage() {
             rows="20px"
             gridColumn="2"
           >
-            <ButtonWide width="100px" backgroundColor={colors.blue}>
+            <Button width="100px" backgroundColor={colors.blue}>
               Cargar más
-            </ButtonWide>
+            </Button>
           </GridItem>
         </GridItem>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ButtonWide, Card } from '../atoms'
+import { Button, Card } from '../atoms'
 import { colors } from '../../styles'
 
 const ImgStyled = styled.img`
@@ -38,7 +38,7 @@ function CardHouse() {
       </DivParr>
       <DivFooterCard>
         <h5>939.000€</h5>
-        <ButtonWide>Localizar</ButtonWide>
+        <Button>Localizar</Button>
       </DivFooterCard>
     </Card>
   )
