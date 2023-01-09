@@ -19,6 +19,8 @@ const ButtonWideStyled = styled.button`
   width: ${({ width }) => width || '75px'};
   height: 25px;
 `
+
+// Llamalo Button a secas
 function ButtonWide({ ...props }) {
   return <ButtonWideStyled {...props}>{props.children}</ButtonWideStyled>
 }
