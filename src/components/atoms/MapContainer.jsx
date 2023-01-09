@@ -1,8 +1,9 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Grid from './Grid'
+import { Grid } from '../../styles'
 
-// El proposito de este styled component no esta claro
-const GridItem = styled(Grid)`
+const StyledMapContainer = styled(Grid)`
   background-color: ${({ background }) => background || 'lightgrey'};
   grid-column: ${({ gridColumn }) => gridColumn || ''};
   grid-row: ${({ gridRow }) => gridRow || ''};
@@ -11,5 +12,12 @@ const GridItem = styled(Grid)`
   border-radius: 10px;
   padding: ${({ padding }) => padding || '1rem'};
 `
+function MapContainer({ children, ...props }) {
+  return <StyledMapContainer {...props}>{children}</StyledMapContainer>
+}
 
-export default GridItem
+MapContainer.propTypes = {
+  children: PropTypes.node,
+}
+
+export default MapContainer

@@ -19,13 +19,7 @@ const DivFooterCard = styled.div`
   height: 20px;
   margin: 5px;
 `
-// const DivParr = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   align-items: flex-start;
-//   margin: 5px;
-//   color: ${colors.main};
-// `
+
 function CardHouse() {
   return (
     <Card>

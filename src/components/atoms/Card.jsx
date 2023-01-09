@@ -7,7 +7,6 @@ const CardStyled = styled(Grid)`
   border-radius: 5px;
   box-shadow: 5px 5px 5px ${colors.shade};
   margin-top: 0;
-  gap: ${({ gap }) => gap || '0px'};
 `
 function Card({ children }) {
   return (
