@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Grid from './Grid'
 
+// El proposito de este styled component no esta claro
 const GridItem = styled(Grid)`
   background-color: ${({ background }) => background || 'lightgrey'};
   grid-column: ${({ gridColumn }) => gridColumn || ''};

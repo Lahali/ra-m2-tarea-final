@@ -13,6 +13,8 @@ const InputStyled = styled.select`
   box-shadow: 2px 2px 5px ${colors.shade};
   appearance: none;
 `
+
+// Llamalo Select, sera máx explicito
 function Input({ id, children }) {
   return <InputStyled name={id}>{children}</InputStyled>
 }
