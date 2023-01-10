@@ -10,8 +10,6 @@ const CardStyled = styled(Grid)`
 `
 function Card({ children }) {
   return (
-    // Al tener columns, rows y gap, algo no funciona bien. Card debería ser más flexible.
-    // Además en el componente de arriba el div styled no acepta o usa los parametros especificados
     <CardStyled columns="1fr" rows="100px 20px 55px" gap="0px">
       {children}
     </CardStyled>

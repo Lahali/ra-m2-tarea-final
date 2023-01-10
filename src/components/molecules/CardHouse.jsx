@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Button, Card } from '../atoms'
 import { colors } from '../../styles'
@@ -20,20 +21,23 @@ const DivFooterCard = styled.div`
   margin: 5px;
 `
 
-function CardHouse() {
+function CardHouse({ location, price, image }) {
   return (
     <Card>
-      <ImgStyled
-        alt="house"
-        src="https://placeimg.com/160/100/arch/grayscale"
-      />
-      <ParragrafStyled>Piso en Barcelona, Grac...</ParragrafStyled>
+      <ImgStyled alt="house" src={image} />
+      <ParragrafStyled>{location}</ParragrafStyled>
       <DivFooterCard>
-        <h5>939.000€</h5>
+        <h5>{price}</h5>
         <Button>Localizar</Button>
       </DivFooterCard>
     </Card>
   )
+}
+
+CardHouse.propTypes = {
+  location: PropTypes.string,
+  price: PropTypes.string,
+  image: PropTypes.string,
 }
 
 export default CardHouse

@@ -1,8 +1,8 @@
 import React from 'react'
-import Body from './components/layout/Body'
+import { Home } from './pages'
 
 function App() {
-  return <Body />
+  return <Home />
 }
 
 export default App
