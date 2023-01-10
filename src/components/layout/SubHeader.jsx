@@ -13,35 +13,10 @@ const SubHeaderStyled = styled(Grid)`
 `
 
 function SubHeader() {
-  const propertyType = [
-    { property: 'Piso, chalet o garaje...' },
-    { property: 'Piso' },
-    { property: 'Chalet' },
-    { property: 'Garaje' },
-  ]
-
-  const city = [
-    {
-      city: 'Madrid, Barcelona o Zaragoza...',
-    },
-    { city: 'Madrid' },
-    { city: 'Barcelona' },
-    { city: 'Zaragoza' },
-  ]
-
   return (
     <SubHeaderStyled columns="1fr 1fr 1fr 1fr" marginTop="0" gap="1rem">
-      <SelectGroup
-        propertyType={propertyType}
-        id="propertyType"
-        placeholder="Piso, chalet o garaje..."
-      />
-      <SelectGroup
-        id="city"
-        placeholder="Madrid, Barcelona o Zaragoza..."
-        city={city}
-      />
-
+      <SelectGroup id="propertyType" placeholder="Piso, chalet o garaje..." />
+      <SelectGroup id="cities" placeholder="Madrid, Barcelona o Zaragoza..." />
       <Icon />
     </SubHeaderStyled>
   )
