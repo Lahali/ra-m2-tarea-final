@@ -6,6 +6,6 @@ export default function Label({ children, id }) {
 }
 
 Label.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   id: PropTypes.string,
 }

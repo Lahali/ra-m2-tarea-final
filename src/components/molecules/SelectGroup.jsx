@@ -1,22 +1,33 @@
+/* eslint-disable indent */
+/* eslint-disable react/jsx-indent */
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import { Select, Label } from '../atoms'
 
-// Debería llamarse SelectGroup
-function SelectGroup({ id, children }) {
+function SelectGroup({ id, propertyType, city }) {
   return (
-    // el Label no tiene porque rodear el Input
     <>
       <Label id={id} />
-      <Select id={id}>{children}</Select>
+      <Select id={id}>
+        {propertyType
+          ? propertyType.map((item, index) => (
+              <option value={item.property} key={item[index]}>
+                {item.property}
+              </option>
+            ))
+          : city.map((item, index) => (
+              <option value={item.city} key={item[index]}>
+                {item.city}
+              </option>
+            ))}
+      </Select>
     </>
   )
 }
 
-// Un select debe tener options, y le faltan props para pasar al Input
 SelectGroup.propTypes = {
   id: PropTypes.string,
-  children: PropTypes.node,
+  propertyType: PropTypes.string,
+  city: PropTypes.string,
 }
 export default SelectGroup
