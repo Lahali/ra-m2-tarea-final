@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
+// El icono debe ser generico y para devolver un icono. No debe ser un button
+// En molecules, o más arriba, si necesitas un icono dentro de un botón puedes hacer <Button><Icon /></Button>
 const ButtonSearchStyled = styled.button`
   background: ${({ background }) =>
     // eslint-disable-next-line implicit-arrow-linebreak, operator-linebreak
