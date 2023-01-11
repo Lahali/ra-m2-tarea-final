@@ -28,10 +28,15 @@ function SelectGroup({ id }) {
 
   return (
     <>
+      {/* Falta htmlFor */}
       <Label id={id} />
+      {/* Falta onChange, spread, ... etc */}
+      {/* Crea dos selects, esto es un error tener un condicional en este nivel */}
+      {/* Generalizar significa tener algo así como <Select options={options} />, de esa manera pasas las options y el componente se encarga de mapear, etc... */}
       <Select id={id}>
         {id === 'propertyType'
           ? propertyType.map((item) => (
+              // generateKey fuera, cada opción debería de tener ya en el array un ID único
               <option value={item.property} key={generateKey()}>
                 {item.property}
               </option>
