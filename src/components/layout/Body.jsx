@@ -1,42 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Button, MapContainer } from '../atoms'
-import { Houses } from '../organisms'
-import { Grid, colors } from '../../styles'
+import PropTypes from 'prop-types'
 import Header from './Header'
 import SubHeader from './SubHeader'
 
-const DivStyled = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50vw;
-  margin-bottom: 5rem;
-`
-
-function Body() {
+function Body({ children }) {
   return (
     <>
       <Header />
       <SubHeader />
-      <Grid
-        columns="1fr 1fr"
-        gap="0"
-        alignContent="center"
-        justifyContent="center"
-      >
-        <Houses />
-        <MapContainer gridColumn="1fr" width="50vw" height="92%">
-          Mapa
-        </MapContainer>
-      </Grid>
-      <DivStyled>
-        <Button width="100px" backgroundColor={colors.blue}>
-          Cargar más
-        </Button>
-      </DivStyled>
+      {children}
     </>
   )
+}
+
+Body.propTypes = {
+  children: PropTypes.node,
 }
 
 export default Body
