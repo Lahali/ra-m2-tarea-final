@@ -4,65 +4,50 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Select, Label } from '../atoms'
 
-function SelectGroup({ id }) {
-  // Puse aquí estos arrays porque ESLint tiene prohibidos los array como props
-  // No sé si es mejor que estén aquí, desabilitar esa regla y ponerlos en el SubHeader
-  // o hacer un componente propertyType.js y otro city.js
-  const propertyType = [
-    { property: 'Piso, chalet o garaje...' },
-    { property: 'Piso' },
-    { property: 'Chalet' },
-    { property: 'Garaje' },
-  ]
+function SelectGroup({ id, cityOptions, propertyOptions }) {
+  const [selection, setSelection] = useState('')
 
-  const cities = [
-    {
-      city: 'Madrid, Barcelona o Zaragoza...',
-    },
-    { city: 'Madrid' },
-    { city: 'Barcelona' },
-    { city: 'Zaragoza' },
-  ]
-
-  const [selectedCity, setSelectedCity] = useState('')
-  const [selectedProperty, setSelectedProperty] = useState('')
+  const handleChange = (e) => {
+    setSelection({
+      ...selection,
+      [e.target.name]: e.target.value,
+    })
+  }
 
   return (
     <>
-      {/* Falta htmlFor */}
       <Label htmlFor={id} />
-      {/* Falta onChange, spread, ... etc */}
-      {/* Crea dos selects, esto es un error tener un condicional en este nivel */}
-      {/* Generalizar significa tener algo así como <Select options={options} />,
-      de esa manera pasas las options y el componente se encarga de mapear, etc... */}
-      <Select
-        id={id}
-        onChange={(e) => setSelectedProperty(e.target.value)}
-        options={propertyType}
-      />
-      <Select
-        id={id}
-        onChange={(e) => setSelectedCity(e.target.value)}
-        options={cities}
-      />
-
-      {/* // {id === 'propertyType'
-        //   ? propertyType.map((item) => (
-        //       // generateKey fuera, cada opción debería de tener ya en el array un ID único
-        //       <option value={item.property} key={generateKey()}>
-        //         {item.property}
-        //       </option>
-        //     ))
-        //   : cities.map((item) => (
-        //       <option value={item.city} key={generateKey()}>
-        //         {item.city}
-        //       </option>
-        //     ))} */}
+      <Select id="propertyType" value={selection} onChange={handleChange}>
+        {propertyOptions.map((item) => (
+          <option key={item.id} value={item.property}>
+            {item.property}
+          </option>
+        ))}
+      </Select>
+      <Select id="cities" value={selection} onChange={handleChange}>
+        {cityOptions.map((item) => (
+          <option key={item.id} value={item.city}>
+            {item.city}
+          </option>
+        ))}
+      </Select>
     </>
   )
 }
 
 SelectGroup.propTypes = {
   id: PropTypes.string,
+  propertyOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      property: PropTypes.string,
+    }),
+  ),
+  cityOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      city: PropTypes.string,
+    }),
+  ),
 }
 export default SelectGroup

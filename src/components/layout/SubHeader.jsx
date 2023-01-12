@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Grid, colors } from '../../styles'
-import { Icon } from '../atoms'
-import { SelectGroup } from '../molecules'
-import ButtonSearch from '../molecules/ButtonSearch'
+import { SelectGroup, ButtonSearch } from '../molecules'
 
 const SubHeaderStyled = styled(Grid)`
   display: flex;
@@ -14,10 +12,26 @@ const SubHeaderStyled = styled(Grid)`
 `
 
 function SubHeader() {
+  const propertyType = [
+    { id: 1, property: 'Piso, chalet o garaje...' },
+    { id: 2, property: 'Piso' },
+    { id: 3, property: 'Chalet' },
+    { id: 4, property: 'Garaje' },
+  ]
+
+  const cities = [
+    {
+      id: 1,
+      city: 'Madrid, Barcelona o Zaragoza...',
+    },
+    { id: 2, city: 'Madrid' },
+    { id: 3, city: 'Barcelona' },
+    { id: 4, city: 'Zaragoza' },
+  ]
+
   return (
     <SubHeaderStyled columns="1fr 1fr 1fr 1fr" marginTop="0" gap="1rem">
-      <SelectGroup id="propertyType" placeholder="Piso, chalet o garaje..." />
-      {/* <SelectGroup id="cities" placeholder="Madrid, Barcelona o Zaragoza..." /> */}
+      <SelectGroup cityOptions={cities} propertyOptions={propertyType} />
       <ButtonSearch />
     </SubHeaderStyled>
   )

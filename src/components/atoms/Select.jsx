@@ -14,13 +14,18 @@ const SelectStyled = styled.select`
   appearance: none;
 `
 
-function Select({ id, children }) {
-  return <SelectStyled name={id}>{children}</SelectStyled>
+function Select({ id, onChange, children }) {
+  return (
+    <SelectStyled name={id} onChange={onChange}>
+      {children}
+    </SelectStyled>
+  )
 }
 
 Select.propTypes = {
   id: PropTypes.string,
   children: PropTypes.node,
+  onChange: PropTypes.func,
 }
 
 export default Select
